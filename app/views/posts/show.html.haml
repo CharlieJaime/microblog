@@ -2,10 +2,11 @@
   %h1.title= @post.title
   %p.date= time_ago_in_words(@post.created_at)
   %p.body= @post.body
-  #buttons
-    = link_to 'Edit', edit_post_path, class: 'button'
-    = link_to 'Delete', post_path, class: 'button', method: :delete, data: { confirm: 'Are you sure?' }
-    = link_to "All Posts", root_path, class: 'button'
+  - if user_signed_in?
+    #buttons
+      = link_to 'Edit', edit_post_path, class: 'button'
+      = link_to 'Delete', post_path, class: 'button', method: :delete, data: { confirm: 'Are you sure?' }
+      = link_to "All Posts", root_path, class: 'button'
   #comments
     %h2= @post.comments.count
     = render @post.comments
