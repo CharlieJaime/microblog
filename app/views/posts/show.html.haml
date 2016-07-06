@@ -2,6 +2,11 @@
   %h1.title= @post.title
   %p.date= time_ago_in_words(@post.created_at)
   %p.body= @post.body
+  #comments
+    %h2= @post.comments.count
+    = render @post.comments
+    %h3 Joing Discussion:
+    = render 'comments/form'
   #buttons
     %button.button= link_to 'Edit', edit_post_path
     %button.button= link_to 'Delete', post_path, method: :delete, data: { confirm: 'Are you sure?' }
