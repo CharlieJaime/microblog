@@ -1,4 +1,12 @@
 = simple_form_for @post do |f|
+  - if @post.errors.any?
+    #errors
+      %h2
+      = pluralize(@post.errors.count, 'error')
+      prevented this comic from saving
+      %ul
+        - @post.errors.full_messages.each do |msg|
+          %li= msg
   =f.label :title
   =f.text_field :title
   %br
