@@ -44,13 +44,14 @@ a {
     text-align: right;
     padding-right: 3em;
     .category {
+      margin-left: -10px;
       font-weight: 600;
       font-size: 2em;
       text-transform: uppercase;
       color: #22747b;
     }
     li {
-      padding: .45em 0;
+      padding: .4em 0;
       a {
         color: #FFF;
         text-decoration: none;
@@ -79,14 +80,14 @@ a {
   outline: none;
   background: transparent;
   border: 1.5px solid #FFF;
-  padding: 1em 2.5em;
+  padding: 0.5em 2em;
   border-radius: 0.5em;
   margin-left: 20px;
   &:hover {
     box-shadow: 2px 2px 2px 2px black;
-    color: #22487b;
+    color: #3d4d56;
     a {
-      color: #22487b !important;
+      color: #3d4d56 !important;
     }
   }
 }
@@ -137,7 +138,7 @@ a {
         color: black;
         font-size: 1.2em;
         &:hover {
-          color: #22487b;
+          color: #3d4d56;
         }
       }
     }
@@ -155,7 +156,7 @@ a {
     .title {
       font-weight: 500;
       text-decoration: none;
-      color: #529FCD;
+      color: #960F0F;
       font-size: 2.5em;
       margin-bottom: 0;
     }
@@ -262,7 +263,11 @@ a {
     margin-bottom: 20px;
     &:hover {
       box-shadow: 2px 2px 2px 2px black;
-      color: #22487b;
+      color: #3d4d56;
     }
   }
+}
+
+#main_content > div.alert{
+  margin-left: 25px;
 }
