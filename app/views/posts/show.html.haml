@@ -1,5 +1,8 @@
 #post_content
   %h1.title= @post.title
   %p.date= time_ago_in_words(@post.created_at)
-
   %p.body= @post.body
+  #buttons
+    %button.button= link_to 'Edit', edit_post_path
+    %button.button= link_to 'Delete', post_path, method: :delete, data: { confirm: 'Are you sure?' }
+    %button.button= link_to "All Posts", root_path
