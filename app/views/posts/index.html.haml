@@ -1,1 +1,4 @@
-%h1 Index Page
+- @posts.each do |post|
+  %div.post_wrapper
+    %h2.title= link_to post.title, post
+    %p.date= time_ago_in_words(post.created_at)
