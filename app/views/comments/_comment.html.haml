@@ -3,3 +3,5 @@
     %p.comment_name= comment.name
     %p.comment_body= comment.body
     %p.comment_title= time_ago_in_words(@post.created_at)
+
+  %p= link_to 'Delete', [comment.post, comment], method: :delete, class: 'button', data: { confirm: 'Are you sure?' }
