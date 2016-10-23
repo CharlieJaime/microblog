@@ -1,0 +1,3 @@
+== README
+
+This Ruby on Rails app is a Social network blogging.  Where you can write a post and share with other bloggers and read alike.
